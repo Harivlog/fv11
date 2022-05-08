@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <!-- Now We are the Family and  now we are the family and do with and do with the full -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/dashboard">Dashboard</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/dashboard">
+                Live Lectures
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/job"> Jobs </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/ad"> Advertisement </a>
+            </li>
+          </ul>
+          <form class="d-flex ms-auto" style="margin-left: auto">
+            <button class="btn me-auto btn-outline-success" type="submit">
+              Logout
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="container">
+        <div class="text-center mt-5">
+          <h1>Live Lecture</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+              <div class="card-body bg-light">
+                <div class="container">
+                  <form
+                    id="contact-form"
+                    role="form"
+                    method="POST"
+                    action="/dashboard"
+                    enctype="multipart/form-data"
+                  >
+                    <div class="controls">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_name">Course Title*</label>
+                            <input
+                              id="form_name"
+                              type="text"
+                              name="title"
+                              class="form-control"
+                              required="required"
+                              data-error="Firstname is required."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_lastname">
+                              University/College
+                            </label>
+                            <input
+                              id="form_lastname"
+                              type="text"
+                              name="insinuate"
+                              class="form-control"
+                              required="required"
+                              data-error="insinuate is required."
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_email">Email *</label>
+                            <input
+                              id="form_email"
+                              type="email"
+                              name="email"
+                              class="form-control"
+                              required="required"
+                              data-error="Valid email is required."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_need"> How Can Attend </label>
+                            <select
+                              id="form_need"
+                              name="attend"
+                              class="form-control"
+                              required="required"
+                              data-error="Please specify your need."
+                            >
+                              <option value="" selected disabled>
+                                --Select Your Issue--
+                              </option>
+                              <option value="Student">Student</option>
+                              <option value="Faculty">Faculty</option>
+                              <option value="Professional">Professional</option>
+                              <option value="Anyone">Anyone</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_need"> Course Level </label>
+                            <select
+                              id="form_need"
+                              name="level"
+                              class="form-control"
+                              required="required"
+                              data-error="Please specify your need."
+                            >
+                              <option value="" selected disabled>
+                                --Select Your Issue--
+                              </option>
+                              <option value="Beginner">Beginner</option>
+                              <option value="Intermediate">Intermediate</option>
+                              <option value="Advanced">Advanced</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_email">Keywords for search</label>
+                            <input
+                              id="form_email"
+                              type="text"
+                              name="keywords"
+                              class="form-control"
+                              required="required"
+                              data-error="Valid email is required."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_email">Trainer information</label>
+                            <input
+                              id="form_email"
+                              type="text"
+                              name="information"
+                              class="form-control"
+                              required="required"
+                              data-error="Valid email is required."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_email">What Skills you get </label>
+                            <input
+                              id="form_email"
+                              type="text"
+                              name="skills"
+                              class="form-control"
+                              required="required"
+                              data-error="Valid email is required."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_email">Trainer contact no. </label>
+                            <input
+                              id="form_email"
+                              type="phone"
+                              name="phone"
+                              class="form-control"
+                              required="required"
+                              data-error="Valid email is required."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_email">Date </label>
+                            <input
+                              id="form_email"
+                              type="date"
+                              name="date"
+                              class="form-control"
+                              required="required"
+                              data-error="Valid email is required."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_email">Time</label>
+                            <input
+                              id="form_email"
+                              type="time"
+                              name="time"
+                              class="form-control"
+                              required="required"
+                              data-error="Valid email is required."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="form_need"> Register --- Buy </label>
+                            <select
+                              id="form_need"
+                              name="subscription"
+                              class="form-control"
+                              required="required"
+                              data-error="Please specify your need."
+                            >
+                              <option value="" selected disabled>
+                                --Select Your Issue--
+                              </option>
+                              <option value="Free">Free</option>
+                              <option value="Registration">Registration</option>
+                              <option value="Buy">Buy</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="mb-3 col-md-12">
+                          <input
+                            class="form-control"
+                            type="file"
+                            id="formFile"
+                            name="image"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="form_message">Description</label>
+                            <textarea
+                              id="form_message"
+                              name="description"
+                              class="form-control"
+                              placeholder="Write your description here."
+                              rows="4"
+                              required="required"
+                              data-error="Please, leave us a message."
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <input
+                            type="submit"
+                            class="btn btn-success btn-send pt-2 btn-block"
+                            value="Create Course"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- /.8 -->
+          </div>
+          <!-- /.row-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
