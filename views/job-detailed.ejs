@@ -1,5 +1,109 @@
-<%= id %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show-jobDetails</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="containerr d-flex justify-content-center align-items-center" style="padding: 40px; flex-direction: column; width : 100% ; ">
+        <a href="/show-job" style="background-color: rgb(163, 218, 163); color: white; padding: 10px 19px;">Go Back</a>
+   <div class="job-detail-wrapper w-75 px-5 my-5" style="margin: 40px; border-radius: 10px; background-color: rgb(217, 244, 217);">
 
-<h1><%= job.title %></h1>
+    
+    <div class="d-flex justify-content-between">
+        <h1>Job Title</h1>
+        <h1> <%= job.title %></h1>
 
-<p><%= job.description %></p>
+    </div>
+    <hr/>
+    <div class="d-flex justify-content-between">
+        <h3>Job Education</h3>
+        <p> <%= job.eduction %></p>
+
+    </div>
+    <hr/><div class="d-flex justify-content-between">
+        <h3>Job Experience</h3>
+        <p><%= job.experience %></p>
+
+    </div>
+    <hr/><div class="d-flex justify-content-between">
+        <h3>Job </h3>
+        <p>Job <%= job.job %></p>
+
+    </div>
+    <hr/>
+    <div class="d-flex justify-content-between">
+        <h3>Payment </h3>
+        <p> <%= job.payment %></p>
+
+    </div>
+    <hr/><div class="d-flex justify-content-between">
+        <h3>Apply For </h3>
+        <p><%= job.apply %></p>
+
+    </div>
+    <hr/><div class="d-flex justify-content-between">
+        <h3>Location For Job </h3>
+        <p> <%= job.location %></p>
+
+    </div>
+    <hr>
+    <div class="d-flex justify-content-between">
+        <h3>Vacancies For Jobs </h3>
+        <p><%= job.vacancies %></p>
+
+    </div>
+<hr/>
+
+    <div class="d-flex justify-content-between">
+        <h3>Job Type</h3>
+        <p> <%= job.jobType %></p>
+
+    </div>
+    <hr/>
+    <div class="d-flex justify-content-between">
+        <h3>Linkdin Account </h3>
+        <p><%= job.linkedIn %></p>
+
+    </div>
+    <hr/>
+    <div class="d-flex justify-content-between">
+        <h3>Facebook Account</h3>
+        <p> <%= job.fb %></p>
+
+    </div>
+    <hr/>
+    <div class="d-flex justify-content-between">
+        <h3>Instagram Account </h3>
+        <p><%= job.instagram %></p>
+
+    </div>
+    <hr/>
+    <div class="d-flex justify-content-between">
+        <h3>Twitter </h3>
+        <p><%= job.twitter %></p>
+
+    </div>
+    <hr/>
+    <div class="">
+        <h3>Discription </h3>
+        <p>Discription <%= job.description %></p>
+
+    </div>
+    
+<hr/>
+
+    
+   </div>
+</div>
+</body>
+</html>
