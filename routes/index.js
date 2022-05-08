@@ -140,26 +140,6 @@ router.get("/show-job", function (req, res, next) {
     }
   });
 });
-router.get("/job/:id", async function (req, res, next) {
-  try {
-    const job = await Job.findById({ _id: req.params.id });
-
-    return res.render("job-detailed", { id: req.params.id, job: job });
-  } catch (error) {
-    console.log(e.message);
-    return res.redirect("/show-job");
-  }
-});
-router.get("/:id", async function (req, res, next) {
-  try {
-    const job = await Ad.findById({ _id: req.params.id });
-    console.log(job);
-    return res.render("ad-detailed", { id: req.params.id, job: job });
-  } catch (error) {
-    console.log(error.message);
-    return res.redirect("/show-job");
-  }
-});
 
 router.get("/logout", function (req, res, next) {
   console.log("logout");
@@ -286,6 +266,27 @@ router.post("/ad", upload.single("image"), async (req, res) => {
   } catch (error) {
     console.log(error.message);
     return;
+  }
+});
+
+router.get("/job/:jobId", async function (req, res, next) {
+  try {
+    const job = await Job.findById({ _id: req.params.jobId });
+    return res.render("job-detailed", { id: req.params.id, job: job });
+  } catch (error) {
+    console.log(e.message);
+    return res.redirect("/show-job");
+  }
+});
+
+router.get("/ad/:adId", async function (req, res, next) {
+  try {
+    const job = await Ad.findById({ _id: req.params.adId });
+    console.log(job);
+    return res.render("ad-detailed", { id: req.params.id, job: job });
+  } catch (error) {
+    console.log(error.message);
+    return res.redirect("/show-job");
   }
 });
 
